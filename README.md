@@ -30,7 +30,7 @@ N/A
 ### Usage
 
 - run: `git clone https://github.com/abdessalem1998/Decoding_Morse_code`
-- run: `ruby morseCodeFunction.rb`
+- run: `ruby morse_code_function.rb`
 
 ### Deployment
 
