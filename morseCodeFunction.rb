@@ -16,4 +16,7 @@ def decode_char(ch)
   }
 end
 
-puts decode_char('.-')
+def decode_word(word)
+  word.split(' ').map { |string| decode_char(string) }.join() 
+end
+puts decode_word('-- -.--')
