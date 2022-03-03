@@ -9,7 +9,7 @@ $hashDecodingMap = {
 
 def decode_char(ch)
   $hashDecodingMap.each {
-  |key,value| 
+  |key,value|
       if(ch ==  value)
         return "#{key}"
       end
@@ -17,6 +17,11 @@ def decode_char(ch)
 end
 
 def decode_word(word)
-  word.split(' ').map { |string| decode_char(string) }.join() 
+  word.split(' ').map { |string| decode_char(string) }.join()
 end
-puts decode_word('-- -.--')
+
+def decode(msg)
+  msg.split('   ').map { |word| decode_word(word) }.join(' ')
+end
+
+puts decode('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
