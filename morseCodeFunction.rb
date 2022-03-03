@@ -1,4 +1,4 @@
-hashDecodingMap = {
+$hashDecodingMap = {
     'A' => '.-', 'B' => '-...', 'C' => '-.-.', 'D' => '-..', 'E' => '.', 'F' => '..-.',
     'G' => '--.', 'H' => '....', 'I' => '..', 'J' => '.---', 'K' => '-.-', 'L' => '.-..',
     'M' => '--', 'N' => '-.', 'O' => '---', 'P' => '.--.', 'Q' => '--.-', 'R' => '.-.',
@@ -7,12 +7,13 @@ hashDecodingMap = {
     '4' => '....-', '5' => '.....', '6' => '-....', '7' => '--...', '8' => '---..', '9' => '----.'
 }
 
-hashDecodingMap.each { |key,value| puts "#{key} : #{value}" }
-
-if(ch ==  hashDecodingMap[i] )
-  return i;
-
 def decode_char(ch)
-
-return i, j, k
+  $hashDecodingMap.each {
+  |key,value| 
+      if(ch ==  value)
+        return "#{key}"
+      end
+  }
 end
+
+puts decode_char('.-')
